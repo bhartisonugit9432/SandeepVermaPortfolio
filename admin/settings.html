@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Settings</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .settings-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+        }
+
+        .settings-section {
+            margin-bottom: 30px;
+        }
+
+        .settings-section h2 {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--secondary-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #f5f5f5;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fas fa-envelope"></i> Contact Submissions</a></li>
+                <li class="active"><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Back to Website</a></li>
+                <li><button id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <header class="content-header">
+                <h1>Settings</h1>
+            </header>
+
+            <div class="settings-container">
+                <div class="settings-section">
+                    <h2>Database Configuration</h2>
+                    <form id="dbConfigForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dbHost">Database Host</label>
+                                <input type="text" id="dbHost" name="dbHost" value="localhost" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dbPort">Database Port</label>
+                                <input type="number" id="dbPort" name="dbPort" value="3306" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dbUser">Database User</label>
+                                <input type="text" id="dbUser" name="dbUser" value="contact_user" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dbPassword">Database Password</label>
+                                <input type="password" id="dbPassword" name="dbPassword" value="contact_password"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dbName">Database Name</label>
+                            <input type="text" id="dbName" name="dbName" value="contact_form" required>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" id="testConnection" class="btn btn-secondary">Test Connection</button>
+                            <button type="submit" class="btn btn-primary">Save Configuration</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="settings-section">
+                    <h2>Email Notifications</h2>
+                    <form id="emailConfigForm">
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="enableNotifications" name="enableNotifications" checked>
+                            <label for="enableNotifications">Enable email notifications for new submissions</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="notificationEmail">Notification Email</label>
+                            <input type="email" id="notificationEmail" name="notificationEmail"
+                                placeholder="admin@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailSubject">Email Subject Template</label>
+                            <input type="text" id="emailSubject" name="emailSubject"
+                                value="New Contact Form Submission: {subject}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailTemplate">Email Body Template</label>
+                            <textarea id="emailTemplate" name="emailTemplate" required>You have received a new contact form submission:
+
+Name: {name}
+Email: {email}
+Subject: {subject}
+Date: {date}
+
+Message:
+{message}
+
+---
+This is an automated notification from your website contact form.</textarea>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" id="testEmail" class="btn btn-secondary">Send Test Email</button>
+                            <button type="submit" class="btn btn-primary">Save Email Settings</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="settings-section">
+                    <h2>Security Settings</h2>
+                    <form id="securityForm">
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="enableCaptcha" name="enableCaptcha" checked>
+                            <label for="enableCaptcha">Enable CAPTCHA for form submissions</label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="enableRateLimiting" name="enableRateLimiting" checked>
+                            <label for="enableRateLimiting">Enable rate limiting (max 5 submissions per hour per
+                                IP)</label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="blockSpamKeywords" name="blockSpamKeywords" checked>
+                            <label for="blockSpamKeywords">Block submissions containing spam keywords</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="spamKeywords">Spam Keywords (one per line)</label>
+                            <textarea id="spamKeywords" name="spamKeywords">viagra
+casino
+lottery
+winner
+free money
+bitcoin investment</textarea>
+                        </div>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-primary">Save Security Settings</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Test Database Connection
+            document.getElementById('testConnection').addEventListener('click', function () {
+                // In a real application, this would send an AJAX request to test the connection
+                alert('Testing connection... Connection successful!');
+            });
+
+            // Test Email
+            document.getElementById('testEmail').addEventListener('click', function () {
+                // In a real application, this would send a test email
+                alert('Test email sent successfully!');
+            });
+
+            // Form Submissions
+            document.getElementById('dbConfigForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                // In a real application, this would save the settings to the server
+                alert('Database configuration saved successfully!');
+            });
+
+            document.getElementById('emailConfigForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                // In a real application, this would save the settings to the server
+                alert('Email settings saved successfully!');
+            });
+
+            document.getElementById('securityForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                // In a real application, this would save the settings to the server
+                alert('Security settings saved successfully!');
+            });
+        });
+    </script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

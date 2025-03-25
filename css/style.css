@@ -1,0 +1,918 @@
+/* Global Styles */
+:root {
+    --primary-color: #198754;
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.section-title .line {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+/* Navigation */
+.navbar {
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 8px 15px !important;
+    margin: 0 5px;
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--transition);
+}
+
+.nav-link:hover:after,
+.nav-link.active:after {
+    width: 70%;
+}
+
+/* Hero Section */
+.hero-section {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background-color: var(--light-color);
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 8px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about-image img {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Education Section */
+.education-item .card {
+    transition: var(--transition);
+}
+
+.education-item .card:hover {
+    transform: translateY(-5px);
+}
+
+.education-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(25, 135, 84, 0.1);
+    border-radius: 50%;
+}
+
+/* Projects Section */
+.project-card {
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Skills Section */
+.progress {
+    height: 8px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    border-radius: 10px;
+}
+
+/* Resume Section */
+.resume-section h4 {
+    margin-bottom: 15px;
+}
+
+.resume-item {
+    position: relative;
+    padding-left: 20px;
+}
+
+.resume-item:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    left: 0;
+    top: 8px;
+}
+
+/* Contact Section */
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(25, 135, 84, 0.1);
+    border-radius: 50%;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background-color: var(--dark-color);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .hero-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .about-image {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-btns .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .hero-btns .btn:last-child {
+        margin-left: 0 !important;
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    bottom: 30px;
+}
+
+.back-to-top:hover {
+    background-color: var(--dark-color);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Modern Resume Styles */
+.resume-modern {
+    margin-bottom: 30px;
+}
+
+.resume-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.resume-sidebar {
+    height: 100%;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #eee;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.timeline-content h5 {
+    margin-bottom: 5px;
+}
+
+.timeline-list {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Skill Tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: rgba(25, 135, 84, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Admin Features */
+.admin-panel {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.admin-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-panel-title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.resume-file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.resume-file-item:hover {
+    background-color: #e9ecef;
+}
+
+.resume-file-info {
+    display: flex;
+    align-items: center;
+}
+
+.resume-file-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(25, 135, 84, 0.1);
+    color: var(--primary-color);
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.resume-file-name {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.resume-file-date {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+.resume-file-actions .btn {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+}
+
+/* Modal Customization */
+.modal-header.bg-success {
+    color: #fff;
+}
+
+.modal-header .btn-close-white {
+    filter: brightness(0) invert(1);
+}
+
+/* Admin Login Button */
+.resume-actions .btn {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+    .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-actions {
+        margin-top: 15px;
+    }
+
+    .resume-actions .btn {
+        margin-left: 0 !important;
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .resume-actions .btn:first-child {
+        margin-top: 0;
+    }
+}
+
+/* Resume Last Updated Info */
+.resume-last-updated {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px dashed #eee;
+}
+
+/* Auto-extract Feature */
+#autoExtractInfo:checked+label {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.form-text {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+/* Success Message */
+.alert-success {
+    border-left: 4px solid var(--primary-color);
+}
+
+.alert-info {
+    border-left: 4px solid #0dcaf0;
+}
+
+.alert .fa-check-circle,
+.alert .fa-info-circle,
+.alert .fa-spinner {
+    font-size: 1.1rem;
+}
+
+.alert .fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Print Button Styles */
+#printResumeBtn {
+    transition: var(--transition);
+}
+
+#printResumeBtn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: #fff !important;
+        font-size: 12pt !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .resume-modern {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .resume-sidebar,
+    .resume-content {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 15px !important;
+    }
+
+    .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+
+    .col-lg-4 {
+        width: 33% !important;
+        flex: 0 0 33% !important;
+    }
+
+    .col-lg-8 {
+        width: 67% !important;
+        flex: 0 0 67% !important;
+    }
+
+    .timeline:before {
+        display: block !important;
+        border-left: 2px solid #ccc !important;
+    }
+
+    .timeline-marker {
+        display: block !important;
+        background-color: #333 !important;
+    }
+
+    .skill-tag {
+        border: 1px solid #ddd !important;
+        background-color: #f8f9fa !important;
+        color: #333 !important;
+        display: inline-block !important;
+        margin: 2px !important;
+    }
+
+    .language-item i.fas.fa-circle.text-success {
+        color: #333 !important;
+    }
+
+    .language-item i.fas.fa-circle.text-muted {
+        color: #ccc !important;
+    }
+
+    a {
+        text-decoration: none !important;
+        color: #333 !important;
+    }
+
+    /* Hide elements not needed for print */
+    .resume-actions,
+    #printResumeBtn,
+    .section-title,
+    .navbar,
+    footer,
+    .back-to-top {
+        display: none !important;
+    }
+
+    /* Ensure lists print correctly */
+    ul,
+    ol,
+    li {
+        page-break-inside: avoid !important;
+    }
+
+    /* Ensure proper page breaks */
+    .resume-section {
+        page-break-inside: avoid !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Fix for timeline items */
+    .timeline-item {
+        page-break-inside: avoid !important;
+        position: relative !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Ensure all text is visible */
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span {
+        color: black !important;
+    }
+}
+
+/* Main Resume Actions */
+.resume-actions-main {
+    margin-bottom: 30px;
+}
+
+.resume-actions-main .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.resume-actions-main .btn-success {
+    box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+}
+
+.resume-actions-main .btn-success:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(25, 135, 84, 0.4);
+}
+
+.resume-actions-main .btn-outline-success:hover {
+    transform: translateY(-3px);
+}
+
+#viewResumeBtn {
+    min-width: 160px;
+}
+
+/* Admin Security Styles */
+#captchaDisplay {
+    background: linear-gradient(145deg, #f0f0f0, #e6e6e6);
+    border-radius: 4px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#captchaDisplay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.02),
+            rgba(0, 0, 0, 0.02) 10px,
+            rgba(0, 0, 0, 0) 10px,
+            rgba(0, 0, 0, 0) 20px);
+}
+
+#refreshCaptcha {
+    height: 38px;
+    width: 38px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#refreshCaptcha:hover {
+    background-color: #f8f9fa;
+}
+
+#adminLogoutBtn {
+    transition: all 0.3s ease;
+}
+
+#adminLogoutBtn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.alert-danger {
+    border-left: 4px solid #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.session-expired {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #dc3545;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 9999;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Lockout animation */
+.login-locked {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+/* Edit Contact Info Styles */
+.edit-info-btn {
+    opacity: 0.7;
+    transition: all 0.2s ease;
+    padding: 0.15rem 0.4rem;
+    font-size: 0.75rem;
+}
+
+.edit-info-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.contact-item {
+    position: relative;
+}
+
+.contact-item .edit-info-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.contact-item:hover .edit-info-btn {
+    opacity: 1;
+}
+
+.fixed-top.alert {
+    z-index: 2000;
+    animation: slideDown 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-success {
+    border-left: 4px solid #28a745;
+}
+
+/* Resume Upload Success Buttons */
+#viewUploadedResumeBtn,
+#autoLogoutBtn {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    padding: 0.375rem 0.75rem;
+}
+
+#viewUploadedResumeBtn:hover {
+    background-color: #198754;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#autoLogoutBtn {
+    position: relative;
+    overflow: hidden;
+}
+
+#autoLogoutBtn:hover {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+#autoLogoutBtn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #dc3545;
+    animation: countdown 10s linear forwards;
+}
+
+@keyframes countdown {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+/* Auto Logout Notification */
+.auto-logout-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    z-index: 9999;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border-top: 4px solid #dc3545;
+}
+
+.auto-logout-notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.auto-logout-content {
+    padding: 15px;
+}
+
+.auto-logout-content h5 {
+    color: #dc3545;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.auto-logout-content p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.auto-logout-content #logoutCountdown {
+    font-weight: bold;
+    color: #dc3545;
+}
+
+.auto-logout-content .progress {
+    height: 6px;
+    background-color: #f8d7da;
+}
+
+.auto-logout-content .progress-bar {
+    transition: width 1s linear;
+}
+
+#cancelLogoutBtn {
+    transition: all 0.3s ease;
+}
+
+#cancelLogoutBtn:hover {
+    background-color: #198754;
+    color: white;
+}
+
+#immediateLogoutBtn {
+    transition: all 0.3s ease;
+}
+
+#immediateLogoutBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+}

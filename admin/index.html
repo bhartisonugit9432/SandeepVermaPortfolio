@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Contact Form Submissions</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="index.html"><i class="fas fa-envelope"></i> Contact Submissions</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Back to Website</a></li>
+                <li><button id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <header class="content-header">
+                <h1>Contact Form Submissions</h1>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search submissions...">
+                        <button id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <button id="refreshBtn" class="refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+                </div>
+            </header>
+
+            <div class="table-container">
+                <div class="table-controls">
+                    <div class="entries-control">
+                        <label>Show
+                            <select id="entriesSelect">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                            entries
+                        </label>
+                    </div>
+                    <div class="export-controls">
+                        <button id="exportCSV" class="export-btn"><i class="fas fa-file-csv"></i> Export CSV</button>
+                    </div>
+                </div>
+
+                <table id="submissionsTable" class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="id">ID <i class="fas fa-sort"></i></th>
+                            <th data-sort="name">Name <i class="fas fa-sort"></i></th>
+                            <th data-sort="email">Email <i class="fas fa-sort"></i></th>
+                            <th data-sort="subject">Subject <i class="fas fa-sort"></i></th>
+                            <th data-sort="message">Message</th>
+                            <th data-sort="date">Date <i class="fas fa-sort"></i></th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Table data will be loaded dynamically -->
+                        <tr class="loading-row">
+                            <td colspan="7">Loading submissions...</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="table-footer">
+                    <div class="table-info">Showing <span id="startEntry">0</span> to <span id="endEntry">0</span> of
+                        <span id="totalEntries">0</span> entries
+                    </div>
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be generated dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for viewing full message -->
+            <div id="messageModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Message Details</h2>
+                    <div class="message-details">
+                        <p><strong>From:</strong> <span id="modalName"></span> (<span id="modalEmail"></span>)</p>
+                        <p><strong>Subject:</strong> <span id="modalSubject"></span></p>
+                        <p><strong>Date:</strong> <span id="modalDate"></span></p>
+                        <div class="message-body">
+                            <h3>Message:</h3>
+                            <p id="modalMessage"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

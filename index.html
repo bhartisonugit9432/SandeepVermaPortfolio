@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Engineering Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">AgriPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold">Hi, I'm <span class="text-success">John Doe</span></h1>
+                        <h2 class="mb-4">Agricultural Engineering Student</h2>
+                        <p class="lead mb-4">Passionate about sustainable farming technologies and innovative
+                            agricultural solutions.</p>
+                        <div class="hero-btns">
+                            <a href="#contact" class="btn btn-success me-3">Contact Me</a>
+                            <a href="#projects" class="btn btn-outline-success">View Projects</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="images/1.jpg" alt="Profile Image" class="img-fluid rounded-circle profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">About <span class="text-success">Me</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="images/about.jpg" alt="About Image" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3 class="mb-3">Agricultural Engineering Student</h3>
+                        <p>I am a passionate agricultural engineering student with a focus on sustainable farming
+                            practices and innovative technologies. My goal is to contribute to the advancement of
+                            agriculture through engineering solutions that address global food security challenges.</p>
+                        <p>With a strong foundation in both engineering principles and agricultural sciences, I am
+                            equipped to develop solutions that improve efficiency, sustainability, and productivity in
+                            agricultural systems.</p>
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-chevron-right text-success me-2"></i> <strong>Name:</strong>
+                                        Sandeep Verma</li>
+                                    <li><i class="fas fa-chevron-right text-success me-2"></i> <strong>Email:</strong>
+                                        vermasp250@gmail.com</li>
+                                    <li><i class="fas fa-chevron-right text-success me-2"></i> <strong>Phone:</strong>
+                                        <span id="aboutPhoneDisplay">9321362955</span>
+                                        <button type="button" class="btn btn-sm btn-outline-success ms-2 edit-info-btn"
+                                            data-field="phone">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-chevron-right text-success me-2"></i> <strong>Degree:</strong>
+                                        Bachelor's</li>
+                                    <li><i class="fas fa-chevron-right text-success me-2"></i> <strong>Major:</strong>
+                                        Agricultural Engineering</li>
+                                    <li><i class="fas fa-chevron-right text-success me-2"></i>
+                                        <strong>Location:</strong>
+                                        <span id="aboutLocationDisplay">117/117, Adil nagar, kalyanpur, lucknow</span>
+                                        <button type="button" class="btn btn-sm btn-outline-success ms-2 edit-info-btn"
+                                            data-field="location">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">My <span class="text-success">Education</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="education-item mb-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="education-icon me-3">
+                                        <i class="fas fa-graduation-cap text-success fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Bachelor of Science in Agricultural Engineering</h4>
+                                        <p class="text-muted mb-0">2020 - Present</p>
+                                    </div>
+                                </div>
+                                <h5>State University of Agriculture</h5>
+                                <p>Pursuing a degree with focus on sustainable farming technologies, irrigation systems,
+                                    and agricultural machinery design. Current GPA: 3.8/4.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="education-item mb-4">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="education-icon me-3">
+                                        <i class="fas fa-school text-success fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4>High School Diploma</h4>
+                                        <p class="text-muted mb-0">2016 - 2020</p>
+                                    </div>
+                                </div>
+                                <h5>Greenfield High School</h5>
+                                <p>Graduated with honors. Participated in science fairs with projects focused on
+                                    agricultural innovations. Received the Excellence in Sciences Award.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">My <span class="text-success">Projects</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Irrigation System</h5>
+                            <p class="card-text">Designed and implemented a soil moisture sensor-based irrigation system
+                                that optimizes water usage in agricultural fields.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-sm btn-outline-success">View Details</a>
+                                </div>
+                                <small class="text-muted">2022</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Vertical Farming Model</h5>
+                            <p class="card-text">Developed a small-scale vertical farming model using hydroponics for
+                                urban agriculture applications.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-sm btn-outline-success">View Details</a>
+                                </div>
+                                <small class="text-muted">2021</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <img src="images/project3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Crop Disease Detection</h5>
+                            <p class="card-text">Created an image processing application that identifies common crop
+                                diseases from photographs to assist farmers.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-sm btn-outline-success">View Details</a>
+                                </div>
+                                <small class="text-muted">2023</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">My <span class="text-success">Skills</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Technical Skills</h3>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <h6>Irrigation System Design</h6>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%"
+                                aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <h6>Agricultural Machinery</h6>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%"
+                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <h6>Soil Analysis</h6>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%"
+                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <h6>CAD Software</h6>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Soft Skills</h3>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <h6>Problem Solving</h6>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 95%"
+                                aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <h6>Team Collaboration</h6>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%"
+                                aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <h6>Project Management</h6>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%"
+                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <h6>Technical Writing</h6>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%"
+                                aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">My <span class="text-success">Resume</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center mb-4">
+                    <div class="resume-actions-main">
+                        <a href="#" class="btn btn-success view-resume-btn" id="viewResumeBtn">
+                            <i class="fas fa-eye me-2"></i>View Resume
+                        </a>
+                        <a href="resume/Sandeep-verma-resume.pdf" class="btn btn-outline-success ms-2 resume-download"
+                            download>
+                            <i class="fas fa-download me-2"></i>Download CV
+                        </a>
+                        <a href="#" class="btn btn-outline-success ms-2" data-bs-toggle="modal"
+                            data-bs-target="#adminLoginModal">
+                            <i class="fas fa-lock me-2"></i>Admin
+                        </a>
+                    </div>
+                    <div class="resume-last-updated text-muted small mt-2">
+                        <i class="fas fa-info-circle me-1"></i> Resume last updated: <span id="lastUpdatedDate">Not
+                            available</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Resume Content - Will be shown in a new window -->
+            <div class="row justify-content-center d-none" id="resumeContent">
+                <div class="col-lg-10">
+                    <div class="resume-modern">
+                        <div class="resume-header d-flex justify-content-between align-items-center mb-4">
+                            <div>
+                                <h3 class="fw-bold mb-1">Sandeep Verma</h3>
+                                <p class="text-muted mb-0">Agricultural Engineering</p>
+                            </div>
+                            <div class="resume-actions">
+                                <a href="resume/Sandeep-verma-resume.pdf" class="btn btn-success resume-download"
+                                    download>
+                                    <i class="fas fa-download me-2"></i>Download CV
+                                </a>
+                                <button type="button" class="btn btn-outline-success ms-2" id="printResumeBtn">
+                                    <i class="fas fa-print me-2"></i>Print
+                                </button>
+                                <a href="#" class="btn btn-outline-success ms-2" data-bs-toggle="modal"
+                                    data-bs-target="#adminLoginModal">
+                                    <i class="fas fa-lock me-2"></i>Admin
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="resume-sidebar p-4 bg-light rounded shadow-sm">
+                                    <div class="resume-personal mb-4">
+                                        <h4 class="resume-section-title">Personal Info</h4>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-envelope text-success me-2"></i>
+                                                vermasp250@gmail.com</li>
+                                            <li class="mb-2 d-flex align-items-center">
+                                                <i class="fas fa-phone text-success me-2"></i>
+                                                <span id="resumePhoneDisplay">+1 234 567 8900</span>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-success ms-2 edit-info-btn"
+                                                    data-field="phone" style="padding: 0.1rem 0.3rem;">
+                                                    <i class="fas fa-pencil-alt fa-xs"></i>
+                                                </button>
+                                            </li>
+                                            <li class="mb-2 d-flex align-items-center">
+                                                <i class="fas fa-map-marker-alt text-success me-2"></i>
+                                                <span id="resumeLocationDisplay">117/117, Adil nagar, kalyanpur,
+                                                    lucknow</span>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-success ms-2 edit-info-btn"
+                                                    data-field="location" style="padding: 0.1rem 0.3rem;">
+                                                    <i class="fas fa-pencil-alt fa-xs"></i>
+                                                </button>
+                                            </li>
+                                            <li><i class="fas fa-graduation-cap text-success me-2"></i> B.S.
+                                                Agricultural Engineering</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="resume-skills mb-4">
+                                        <h4 class="resume-section-title">Key Skills</h4>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag">Irrigation Systems</span>
+                                            <span class="skill-tag">Soil Analysis</span>
+                                            <span class="skill-tag">CAD Design</span>
+                                            <span class="skill-tag">Sustainable Farming</span>
+                                            <span class="skill-tag">Project Management</span>
+                                            <span class="skill-tag">Research</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="resume-languages">
+                                        <h4 class="resume-section-title">Languages</h4>
+                                        <div class="language-item d-flex justify-content-between mb-2">
+                                            <span>English</span>
+                                            <div>
+                                                <i class="fas fa-circle text-success"></i>
+                                                <i class="fas fa-circle text-success"></i>
+                                                <i class="fas fa-circle text-success"></i>
+                                                <i class="fas fa-circle text-success"></i>
+                                                <i class="fas fa-circle text-success"></i>
+                                            </div>
+                                        </div>
+                                        <div class="language-item d-flex justify-content-between mb-2">
+                                            <span>Spanish</span>
+                                            <div>
+                                                <i class="fas fa-circle text-success"></i>
+                                                <i class="fas fa-circle text-success"></i>
+                                                <i class="fas fa-circle text-success"></i>
+                                                <i class="fas fa-circle text-muted"></i>
+                                                <i class="fas fa-circle text-muted"></i>
+                                            </div>
+                                        </div>
+                                        <div class="language-item d-flex justify-content-between">
+                                            <span>French</span>
+                                            <div>
+                                                <i class="fas fa-circle text-success"></i>
+                                                <i class="fas fa-circle text-success"></i>
+                                                <i class="fas fa-circle text-muted"></i>
+                                                <i class="fas fa-circle text-muted"></i>
+                                                <i class="fas fa-circle text-muted"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8">
+                                <div class="resume-content p-4 bg-white rounded shadow-sm">
+                                    <div class="resume-section mb-4">
+                                        <h4 class="resume-section-title position-relative">
+                                            <i class="fas fa-briefcase text-success me-2"></i> Experience
+                                        </h4>
+                                        <div class="timeline">
+                                            <div class="timeline-item">
+                                                <div class="timeline-marker"></div>
+                                                <div class="timeline-content">
+                                                    <h5>Research Assistant</h5>
+                                                    <p class="text-muted mb-1">Agricultural Research Center | Summer
+                                                        2022</p>
+                                                    <ul class="timeline-list">
+                                                        <li>Assisted in field experiments for crop yield optimization
+                                                        </li>
+                                                        <li>Collected and analyzed soil samples for nutrient content
+                                                        </li>
+                                                        <li>Documented research findings and contributed to research
+                                                            papers</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-marker"></div>
+                                                <div class="timeline-content">
+                                                    <h5>Farm Intern</h5>
+                                                    <p class="text-muted mb-1">Green Valley Farms | Summer 2021</p>
+                                                    <ul class="timeline-list">
+                                                        <li>Gained hands-on experience with modern farming equipment
+                                                        </li>
+                                                        <li>Assisted in implementing irrigation systems</li>
+                                                        <li>Participated in crop monitoring and harvest operations</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="resume-section mb-4">
+                                        <h4 class="resume-section-title position-relative">
+                                            <i class="fas fa-graduation-cap text-success me-2"></i> Education
+                                        </h4>
+                                        <div class="timeline">
+                                            <div class="timeline-item">
+                                                <div class="timeline-marker"></div>
+                                                <div class="timeline-content">
+                                                    <h5>Bachelor of Science in Agricultural Engineering</h5>
+                                                    <p class="text-muted mb-1">State University of Agriculture | 2020 -
+                                                        Present</p>
+                                                    <p>GPA: 3.8/4.0</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-marker"></div>
+                                                <div class="timeline-content">
+                                                    <h5>High School Diploma</h5>
+                                                    <p class="text-muted mb-1">Greenfield High School | 2016 - 2020</p>
+                                                    <p>Graduated with honors</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="resume-section">
+                                        <h4 class="resume-section-title position-relative">
+                                            <i class="fas fa-certificate text-success me-2"></i> Certifications
+                                        </h4>
+                                        <div class="timeline">
+                                            <div class="timeline-item">
+                                                <div class="timeline-marker"></div>
+                                                <div class="timeline-content">
+                                                    <h5>Sustainable Agriculture Practices</h5>
+                                                    <p class="text-muted mb-1">Online Course | 2022</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-marker"></div>
+                                                <div class="timeline-content">
+                                                    <h5>AutoCAD for Agricultural Engineering</h5>
+                                                    <p class="text-muted mb-1">Technical Institute | 2021</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="fw-bold">Contact <span class="text-success">Me</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Get In Touch</h3>
+                        <p class="mb-4">Feel free to contact me for any questions, project collaborations, or
+                            opportunities. I'm always open to discussing new ideas and challenges in agricultural
+                            engineering.</p>
+                        <div class="contact-item d-flex mb-3">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-map-marker-alt text-success"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Location</h5>
+                                <p id="contactLocationDisplay">117/117, Adil nagar, kalyanpur, lucknow</p>
+                            </div>
+                            <button type="button"
+                                class="btn btn-sm btn-outline-success align-self-center edit-info-btn ms-2"
+                                data-field="location">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </div>
+                        <div class="contact-item d-flex mb-3">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-envelope text-success"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Email</h5>
+                                <p>vermasp250@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item d-flex mb-3">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-phone text-success"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Phone</h5>
+                                <p id="contactPhoneDisplay">+1 234 567 8900</p>
+                            </div>
+                            <button type="button"
+                                class="btn btn-sm btn-outline-success align-self-center edit-info-btn ms-2"
+                                data-field="phone">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </div>
+                        <div class="social-links mt-4">
+                            <a href="#" class="me-2 social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="me-2 social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="me-2 social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-form card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Send Message</h3>
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="name" name="name"
+                                                placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                placeholder="Your Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="subject" name="subject"
+                                                placeholder="Subject" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="message" name="message" rows="5"
+                                                placeholder="Your Message" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-success">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Sandeep Verma</h5>
+                    <p class="mb-0">Agricultural Engineering Student</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2023 All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTop" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <!-- Admin Login Modal -->
+    <div class="modal fade" id="adminLoginModal" tabindex="-1" aria-labelledby="adminLoginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="adminLoginModalLabel">Admin Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="adminLoginForm">
+                        <div class="mb-3">
+                            <label for="adminUsername" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="adminUsername" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="adminPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="adminPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="adminCaptcha" class="form-label">Security Check</label>
+                            <div class="d-flex align-items-center mb-2">
+                                <div id="captchaDisplay" class="bg-light p-2 me-2 text-center"
+                                    style="width: 120px; font-family: 'Courier New', monospace; letter-spacing: 3px; font-weight: bold;">
+                                </div>
+                                <button type="button" id="refreshCaptcha" class="btn btn-sm btn-outline-secondary">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control" id="adminCaptcha"
+                                placeholder="Enter the code shown above" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">Login</button>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="admin/login.html" class="text-success">Go to Admin Panel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Upload Modal -->
+    <div class="modal fade" id="resumeUploadModal" tabindex="-1" aria-labelledby="resumeUploadModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="resumeUploadModalLabel">Upload Resume & Update Profile</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-end mb-3">
+                        <button type="button" id="adminLogoutBtn" class="btn btn-sm btn-outline-danger">
+                            <i class="fas fa-sign-out-alt me-1"></i> Logout
+                        </button>
+                    </div>
+                    <div class="resume-current-file mb-3" id="currentResumeInfo" style="display: none;">
+                        <p><strong>Current Resume:</strong></p>
+                        <p class="file-name mb-1" id="currentResumeTitle"></p>
+                        <p class="text-muted" id="currentResumeDate"></p>
+                    </div>
+                    <form id="resumeUploadForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="mb-3">Resume File</h5>
+                                <div class="mb-3">
+                                    <label for="resumeFile" class="form-label">Select Resume PDF</label>
+                                    <input type="file" class="form-control" id="resumeFile" accept=".pdf" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="resumeTitle" class="form-label">Resume Title</label>
+                                    <input type="text" class="form-control" id="resumeTitle"
+                                        placeholder="e.g., John Doe Resume 2023" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="mb-3">Profile Information</h5>
+                                <div class="mb-3">
+                                    <label for="profileName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="profileName"
+                                        placeholder="e.g., John Doe" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="profileEmail" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="profileEmail"
+                                        placeholder="e.g., john.doe@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="profilePhone" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="profilePhone"
+                                        placeholder="e.g., +1 234 567 8900" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="profileLocation" class="form-label">Location</label>
+                                    <input type="text" class="form-control" id="profileLocation"
+                                        placeholder="e.g., New York, USA" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i> Your resume file will be stored for download.
+                            Profile information will be saved but not automatically updated on the website.
+                        </div>
+                        <div class="d-grid mt-3">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-upload me-2"></i>Upload Resume
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Contact Info Modal -->
+    <div class="modal fade" id="editContactInfoModal" tabindex="-1" aria-labelledby="editContactInfoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="editContactInfoModalLabel">Edit Contact Information</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editContactInfoForm">
+                        <input type="hidden" id="editFieldType" value="">
+                        <div class="mb-3" id="phoneEditField">
+                            <label for="editPhone" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="editPhone" placeholder="e.g., +1 234 567 8900">
+                            <div class="form-text">Enter your phone number with country code.</div>
+                        </div>
+                        <div class="mb-3" id="locationEditField">
+                            <label for="editLocation" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="editLocation" placeholder="e.g., New York, USA">
+                            <div class="form-text">Enter your city and country.</div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
